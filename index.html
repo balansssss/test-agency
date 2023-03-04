@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
     <link rel="stylesheet" href="./style.css">
     <title>Metricon</title>
 </head>
@@ -21,27 +22,25 @@
         </form>
     </header>
 
-    <section class="carousel">
+    <section class="carousel" id="carousel">
         <div class="carousel_info">
-            <h1 class="carousel_info_title">LTD Metricon</h1>
-            <p class="carousel_info_description">- experienced marketing <br> and promoting online projects <br> and
-                products
-                company</p>
+            <h1 class="carousel_info_title" id="carouselTitle"></h1>
+            <p class="carousel_info_description" id="carouselDescription"></p>
             <button class="carousel_info_button">Read more</button>
         </div>
         <div class="carousel_toggle">
-            <div class="carousel_toggle_item active"></div>
+            <div class="carousel_toggle_item"></div>
             <div class="carousel_toggle_item"></div>
             <div class="carousel_toggle_item"></div>
         </div>
-        <img class="carousel_controller left_controller" src="./assets/img/left_arrow.png" alt="Left Arrow Control"
-            title="Previous">
-        <img class="carousel_controller right_controller" src="./assets/img/right_arrow.png" alt="Right Arrow Control"
-            title="Next">
+        <img class="carousel_controller left_controller" id="carouselLeftController" src="./assets/img/left_arrow.png"
+            alt="Left Arrow Control" title="Previous">
+        <img class="carousel_controller right_controller" id="carouselRightController"
+            src="./assets/img/right_arrow.png" alt="Right Arrow Control" title="Next">
     </section>
 
     <section class="partners wrapper">
-        <div class="partners_item">
+        <div class="partners_item" id="partnersAdvertising">
             <img class="partners_item_img statistics" src="./assets/img/partners/Statistics.png" alt="Statistic">
             <h2 class="partners_item_title">Рекламодателям</h2>
             <p class="partners_item_description">Вы исчерпали свои потенциалы
@@ -51,7 +50,7 @@
                 поможет Вам достигнуть все поставленные цели в кротчайшие сроки.</p>
             <button class="partners_item_button">Read more</button>
         </div>
-        <div class="partners_item">
+        <div class="partners_item" id="partnersWebmasters">
             <img class="partners_item_img webmaster" src="./assets/img/partners/Money.png" alt="Webmasters">
             <h2 class="partners_item_title">Вебмастерам</h2>
             <p class="partners_item_description">Устали от сомнительных предложений Ваших рекламных брокеров?
@@ -61,7 +60,7 @@
                 выгодным для Вас условиям!</p>
             <button class="partners_item_button">Read more</button>
         </div>
-        <div class="partners_item">
+        <div class="partners_item" id="partnersPartners">
             <img class="partners_item_img settings" src="./assets/img/partners/Setings.png" alt="Settings">
             <h2 class="partners_item_title">Партнерам</h2>
             <p class="partners_item_description">LTD Metricon - Команда профессионалов, направляющая свои знания и
@@ -76,48 +75,58 @@
 
     <section class="webmasters wrappers">
         <div class="webmasters_item">
-            <img class="webmasters_item_img" src="./assets/img/webmasters/webmasters.png" alt="Statistics">
-            <h2 class="webmasters_item_title section_title">Вебмастерам</h2>
-            <h3 class="webmasters_item_subtitle section_subtitle">Лучшие рекламные форматы</h3>
-            <p class="webmasters_item_description section_description">
-                На рынке встречаются рекламные сети, которые не в состоянии со старта дать объективную оценку Вашему
-                проекту, в результате чего Ваши возможные доходы прогнозируются не совсем корректно, однако обещания,
-                не всегда соответствуют Вашим ожиданиям.
-            </p>
-            <p class="webmasters_item_description section_description">
-                В те моменты, когда Ваши рекламные брокеры стараются найти собственную выгоду, мы делаем все возможное,
-                чтоб в первую очередь предоставить выгодные условия Вам! Мы заинтересованы в сотрудничестве с
-                площадками различных тематик, для каждой из которых готовы предложить индивидуальные условия.
-                Тарификация происходит в режиме реального времени, стабильность выплат приятно удивит каждого нового
-                партнера.
-            </p>
-            <p class="webmasters_item_description section_description">
-                Начинайте зарабатывать с LTD Metricon, который предоставит Вам не только качественные рекламные
-                материалы, но и надежного партнера на долгосрочный период.
-            </p>
+            <img class="webmasters_item_img" id="webmastersStatisticIcon" src="./assets/img/webmasters/webmasters.png"
+                alt="Statistics">
+            <div id="webmastersStatisticDescription">
+                <h2 class="webmasters_item_title section_title">Вебмастерам</h2>
+                <h3 class="webmasters_item_subtitle section_subtitle">Лучшие рекламные форматы</h3>
+                <p class="webmasters_item_description section_description">
+                    На рынке встречаются рекламные сети, которые не в состоянии со старта дать объективную оценку Вашему
+                    проекту, в результате чего Ваши возможные доходы прогнозируются не совсем корректно, однако
+                    обещания,
+                    не всегда соответствуют Вашим ожиданиям.
+                </p>
+                <p class="webmasters_item_description section_description">
+                    В те моменты, когда Ваши рекламные брокеры стараются найти собственную выгоду, мы делаем все
+                    возможное,
+                    чтоб в первую очередь предоставить выгодные условия Вам! Мы заинтересованы в сотрудничестве с
+                    площадками различных тематик, для каждой из которых готовы предложить индивидуальные условия.
+                    Тарификация происходит в режиме реального времени, стабильность выплат приятно удивит каждого нового
+                    партнера.
+                </p>
+                <p class="webmasters_item_description section_description">
+                    Начинайте зарабатывать с LTD Metricon, который предоставит Вам не только качественные рекламные
+                    материалы, но и надежного партнера на долгосрочный период.
+                </p>
+            </div>
         </div>
         <div class="webmasters_item">
-            <img class="webmasters_item_img" src="./assets/img/webmasters/advertisers.png" alt="Statistics">
-            <h2 class="webmasters_item_title section_title">Рекламодателям</h2>
-            <h3 class="webmasters_item_subtitle section_subtitle">Только качественный трафик</h3>
-            <p class="webmasters_item_description section_description">
-                Рынок нашего времени предлогает рекламодателям
-                различные товары и услуги. Независимо от бюджета каждого рекламодателя, мы с радостью обсудим все
-                возможные условия предстоящего сотрудничества и подберем именно то, которое в первую очередь окажется
-                взаимовыгодной и будет показывать желанные результаты.
+            <img class="webmasters_item_img" id="webmastersAdvertiserIcon" src="./assets/img/webmasters/advertisers.png"
+                alt="Advertisers">
+            <div id="webmastersAdvertiserDescription">
+                <h2 class="webmasters_item_title section_title">Рекламодателям</h2>
+                <h3 class="webmasters_item_subtitle section_subtitle">Только качественный трафик</h3>
+                <p class="webmasters_item_description section_description">
+                    Рынок нашего времени предлогает рекламодателям
+                    различные товары и услуги. Независимо от бюджета каждого рекламодателя, мы с радостью обсудим все
+                    возможные условия предстоящего сотрудничества и подберем именно то, которое в первую очередь
+                    окажется
+                    взаимовыгодной и будет показывать желанные результаты.
 
-            </p>
-            <p class="webmasters_item_description section_description">
-                Наша команда поможет Вам создать высокоэффективные компании, благодаря которым Ваши проекты будет
-                посещать исключительно целевая аудитория. У нас нет цели просто заработать, наша главная задача
-                заключается в том, чтоб сделать необходимый взнос, благодаря которому Ваши интересы будут достигнуты!
-                Вам не только качественные рекламные материалы, но и надежного партнера на долгосрочный период.
-            </p>
+                </p>
+                <p class="webmasters_item_description section_description">
+                    Наша команда поможет Вам создать высокоэффективные компании, благодаря которым Ваши проекты будет
+                    посещать исключительно целевая аудитория. У нас нет цели просто заработать, наша главная задача
+                    заключается в том, чтоб сделать необходимый взнос, благодаря которому Ваши интересы будут
+                    достигнуты!
+                    Вам не только качественные рекламные материалы, но и надежного партнера на долгосрочный период.
+                </p>
+            </div>
         </div>
     </section>
 
     <section class="forpartner wrapper">
-        <div class="forpartner_container">
+        <div class="forpartner_container" id="forpartners">
             <h2 class="forpartner_container_title section_title">Партнерам</h2>
             <h3 class="forpartner_container_subtitle section_subtitle">ВЫСОКОДОХОДНЫЕ БИЗНЕС-ПРОЦЕССЫ</h3>
             <p class="forpartner_container_description section_description">
@@ -143,7 +152,7 @@
     </section>
 
     <section class="advertising wrapper">
-        <div class="advertising_item">
+        <div class="advertising_item" id="advertisingAdforce">
             <img class="advertising_item_img adforce_logo" src="./assets/img/advertising/Adforce.png"
                 alt="Adforce Logo">
             <p class="advertising_item_description section_description">
@@ -161,7 +170,7 @@
                 покупателями.
             </p>
         </div>
-        <div class="advertising_item utarget">
+        <div class="advertising_item utarget" id="advertisingUtarget">
             <img class="advertising_item_img utarget_logo" src="./assets/img/advertising/utarget.png"
                 alt="Adforce Logo">
             <p class="advertising_item_description section_description">
@@ -198,6 +207,8 @@
             © 2015 METRICON. Privacy policy
         </p>
     </footer>
+
+    <script src="./script.js"></script>
 </body>
 
 </html>
