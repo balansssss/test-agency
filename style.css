@@ -625,6 +625,7 @@ button:hover {
 
     .footer_social {
         flex-direction: column;
+        align-items: baseline;
     }
 
     .footer_social_item {
