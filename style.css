@@ -150,6 +150,19 @@ button:hover {
     margin: 0 10px;
 }
 
+.header_hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.header_hamburger_line {
+    height: 3px;
+    width: 50px;
+    background-color: var(--cl-white);
+    margin: 3px 0;
+}
+
 .input_info {
     width: 178px;
     padding-left: 14px;
@@ -343,8 +356,7 @@ button:hover {
 }
 
 .forpartner_container {
-    background-color: var(--cl-white);
-    opacity: 0.9;
+    background-color: rgba(255, 255, 255, 0.9);
     /*max-width: 768px;
     max-height: 367px;*/
     text-align: center;
@@ -623,6 +635,50 @@ button:hover {
 @media screen and (max-width: 950px) {
     .header_form {
         display: none;
+    }
+
+    .header_hamburger {
+        display: flex;
+        z-index: 5;
+    }
+
+    .header_hamburger_line {
+        transition: .4s;
+    }
+
+    .header_hamburger.active .header_hamburger_line:nth-child(2) {
+        display: none;
+    }
+
+    .header_hamburger.active .header_hamburger_line:nth-child(1) {
+        transform: rotate(45deg) translateY(6px);
+    }
+
+    .header_hamburger.active .header_hamburger_line:nth-child(3) {
+        transform: rotate(-45deg) translateY(-6px);
+    }
+
+    .header_form.mobile {
+        display: flex;
+        background-color: var(--cl-dark-ocean);
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        animation: fade forwards 1s;
+        z-index: 3;
+    }
+
+    body.hidden {
+        overflow: hidden;
+    }
+
+    .header_form.mobile>* {
+        margin: 10px 0;
     }
 
     .carousel_info {

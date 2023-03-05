@@ -104,3 +104,15 @@ observer.observe(document.querySelector('#forpartners'));
 observer.observe(document.querySelector('#advertisingAdforce'));
 observer.observe(document.querySelector('#advertisingUtarget'));
 
+// Мобильное меню
+
+const hamburger = document.querySelector('#hamburger');
+const formLogin = document.querySelector('#formLogin');
+const body = document.body;
+
+hamburger.addEventListener('click', () => {
+    formLogin.classList.toggle('mobile');
+    hamburger.classList.toggle('active');
+    body.classList.toggle('hidden');
+});
+
